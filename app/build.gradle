@@ -1,8 +1,9 @@
 plugins {
     id 'com.android.application'
 }
-apply plugin: 'maven-publish'
+//apply plugin: 'maven-publish'
 
+apply from: file('publish.gradle')
 
 
 android {
