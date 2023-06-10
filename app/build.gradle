@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
 }
+apply plugin: 'maven-publish'
+
+
 
 android {
     namespace 'com.alveoair.alveoairsdkv2'
