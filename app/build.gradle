@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
 }
+//apply plugin: 'maven-publish'
+
+apply from: file('publish.gradle')
+
 
 android {
     namespace 'com.alveoair.alveoairsdkv2'
@@ -23,9 +27,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
 }
 
 dependencies {
@@ -33,7 +41,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation files("$rootDir/app/libs/mylibrary-release.aar")
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -75,6 +82,8 @@ dependencies {
      */
     debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
     releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    implementation files("../app/libs/mylibrary-release.aar")
 
 //    implementation 'com.github.alveofit:alveoairSDK:1.0.8'
 }
