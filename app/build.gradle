@@ -83,7 +83,7 @@ dependencies {
     debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
     releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
 
-    implementation files("$rootDir/app/libs/mylibrary-release.aar")
+    implementation files("../app/libs/mylibrary-release.aar")
 
 //    implementation 'com.github.alveofit:alveoairSDK:1.0.8'
 }
